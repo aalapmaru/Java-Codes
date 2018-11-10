@@ -6,7 +6,7 @@ class Fibo{
 	int memo[]=new int[100];
 	static int calculate(int n) {
 
-		int memo[]=new int[100];  // Array to Store calculated values
+		int memo[]=new int[n+1];  // Array to Store calculated values
 		for(int i=0;i<memo.length;i++) {
 			memo[i]=-1;      // set all elements to -1 initially
 		}
