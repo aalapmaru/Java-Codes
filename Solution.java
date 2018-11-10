@@ -1,3 +1,7 @@
+// Comparator Class Example
+//Sort player scores for high to low
+//if Scores are same, sort alphabetically
+
 import java.util.*;
 
 class Checker implements Comparator<Player>{
