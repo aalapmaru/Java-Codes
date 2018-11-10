@@ -6,9 +6,9 @@ class Fibo{
 	int memo[]=new int[100];
 	static int calculate(int n) {
 
-		int memo[]=new int[100];
+		int memo[]=new int[100];  // Array to Store calculated values
 		for(int i=0;i<memo.length;i++) {
-			memo[i]=-1;
+			memo[i]=-1;      // set all elements to -1 initially
 		}
 
 		if(memo[n]==-1) {
@@ -18,7 +18,7 @@ class Fibo{
 				memo[n]=n;
 
 			else
-				memo[n]=calculate(n-1)+calculate(n-2);
+				memo[n]=calculate(n-1)+calculate(n-2); // calculate fibonacci of n and store it in memo[n] 
 
 		}
 
