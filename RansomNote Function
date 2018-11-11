@@ -1,8 +1,15 @@
-// HackerRank Ransom note problem function
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
+public class Solution {
 
-
-  static void checkMagazine(String[] magazine, String[] note) {
+    // Complete the checkMagazine function below.
+    static void checkMagazine(String[] magazine, String[] note) {
         
          Map<String,Integer> magmap=new HashMap<String,Integer>();
          Map<String,Integer> notemap=new HashMap<String,Integer>();
