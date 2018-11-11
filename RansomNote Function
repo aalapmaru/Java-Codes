@@ -1,0 +1,43 @@
+// HackerRank Ransom note problem function
+
+
+
+  static void checkMagazine(String[] magazine, String[] note) {
+        
+         Map<String,Integer> magmap=new HashMap<String,Integer>();
+         Map<String,Integer> notemap=new HashMap<String,Integer>();
+        
+        Integer occurences;
+        
+        for(String s:magazine){
+           if(magmap.containsKey(s)){
+               magmap.put(s,magmap.get(s)+1);
+           }
+            else{
+                magmap.put(s,1);
+            }
+            
+        }
+          
+        for(String s:note){
+            if(notemap.containsKey(s)){
+               notemap.put(s, notemap.get(s)+1);
+           }
+            else{
+                notemap.put(s,1);
+            }
+            
+        }
+        boolean ans=true;
+        for(String s:notemap.keySet()){
+            if(!magmap.containsKey(s) || (notemap.get(s)>magmap.get(s))){
+                ans=false;
+                break;
+            }
+        }
+        
+        System.out.println((ans) ? "Yes" : "No");
+        
+        
+        
+    }
