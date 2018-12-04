@@ -1,0 +1,45 @@
+
+// HackerRank
+// Tree: Huffman Decoding function
+
+/*Function Description
+
+Complete the function decode_huff in the editor below. It must return the decoded string.
+
+decode_huff has the following parameters:
+
+root: a reference to the root node of the Huffman tree
+s: a Huffman encoded string
+Input Format
+
+There is one line of input containing the plain string, . Background code creates the Huffman tree then passes the head node and the encoded string to the function.
+
+Constraints
+
+
+Output Format
+
+Output the decoded string on a single line.*/
+
+//----------------------------------------------         SOLUTION            ---------------------------------------------------------------------------------------------------------
+
+
+void decode(String s, Node root) {
+
+        StringBuilder sb=new StringBuilder();
+        Node curr= root;
+
+        for(int i=0;i<s.length();i++){
+
+            curr=s.charAt(i)=='0' ? curr.left:curr.right;
+
+            if(curr.left==null && curr.right==null){
+
+                sb.append(curr.data);
+                curr=root;
+            }
+          
+        }
+         System.out.print(sb);
+
+    }
